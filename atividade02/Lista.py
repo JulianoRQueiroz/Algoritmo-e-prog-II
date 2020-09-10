@@ -7,39 +7,60 @@ from elementos import Elemento
 class Lista:
     def __init__(self):
         self.inicio = None
+        self.fim = 0 
         self.tamanho = 0 
 
-    def __len__(self):
-        return self.tamanho
+    def adicionar(self, valor):
+        valor = Elemento(valor)
+        if self.tamanho == 0:
+            self.inicio = valor
+            self.fim = valor
+        else: 
+            self.fim.proximo = valor 
+            self.fim = valor
+        self.tamanho += 1
 
-    def adicionar(self, valor1, valor2):
-        if self.inicio:
-            aux = self.inicio
-            while(aux.proximo):
-                aux = aux.proximo
-            aux.proximo = Elemento(valor1, valor2)
+    def imprimir(self):
+        texto = ""
+        if self.tamanho == 0:
+            texto = "Não possui elementos!"
         else:
-            self.inicio = Elemento(valor1, valor2)
-        self.tamanho = self.tamanho + 1
-
-    # def adicionarInverso(self, valor2):
-    #     if self.inicio:
-    #         aux = self.inicio
-    #         while(aux.proximo):
-    #             aux = aux.proximo
-    #         aux.proximo = ElmentoInverso(valor2)
-    #     else:
-    #         self.inicio = ElmentoInverso(valor2)
-    #     self.tamanho = self.tamanho + 1
+            aux = self.inicio
+            while(aux):
+                texto = texto + str(aux.elementos) + " - "
+                aux = aux.proximo  
+        print( texto )
     
-    def imprimirOrdenado(self):
-        aux = self.inicio
-        while(aux):
-            print(aux.elementos.sort(), '\n')
-            aux = aux.proximo
-            
+    def imprimirOrdenado(self, valor):
+        valor = Elemento(valor)
+        if self.tamanho == 0:
+            self.inicio = valor
+            self.fim = valor
+        else:
+            while():
+                valor = ''.join(sorted()) + ' - '
+                aux = aux.proximo 
+        print(valor)
+        
     def imprimirInverso(self):
         aux = self.inicio
-        while(aux):
-            print(aux.elementos.sort(reversed), '\n')
-            aux = aux.proximo
+        valor = Elemento(valor)
+        if self.tamanho == 0:
+            self.inicio = valor
+            self.fim = valor
+        else:
+            while():
+                valor = ''.join(sorted(reversed)) + ' - '
+                aux = aux.proximo 
+        print(valor)
+    
+    def remover(self):
+        if self.tamanho == 0:
+            print("Elementos vazio!")
+        elif self.tamanho == 1:
+            self.inicio = None
+            self.fim = None
+            self.tamanho -= 1
+        else:
+            self.inicio = self.inicio.proximo
+            self.tamanho -= 1
