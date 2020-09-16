@@ -43,16 +43,13 @@ class Lista:
         print(valor)
         
     def imprimirInverso(self):
-        aux = self.inicio
-        valor = Elemento(valor)
-        if self.tamanho == 0:
-            self.inicio = valor
-            self.fim = valor
-        else:
-            while():
-                valor = ''.join(sorted(reversed)) + ' - '
-                aux = aux.proximo 
-        print(valor)
+        if self.inicio == None:
+            print("Lista Vazia")
+        aux = self.fim
+        while( aux ):
+            print( aux.dado , "\n" )
+            aux = aux.anterior
+        print( "Tamanho da Lista: " + str(self.tamanho ))
     
     def remover(self):
         if self.tamanho == 0:
