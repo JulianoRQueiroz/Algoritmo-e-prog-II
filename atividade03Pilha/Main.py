@@ -22,7 +22,7 @@ while True:
         pilha.imprimir()
     if e == '3':
         pilha.remover()
-        print('-> Ultimo valor removido.')
+        print('-> Valor removido.')
 
         
 
