@@ -29,8 +29,8 @@ def imprimir():
     print(dicionario)
 
 menu = ''' \n\n\nMenu
-    0-  Finalizar
-    1-	Cadastrar alunos
+    0 -  Finalizar
+    1 -	Cadastrar alunos
     2 - Cadastrar notas
     3 - Cálculo notas
     4 - Imprimir dicionário
@@ -45,12 +45,12 @@ while True:
         print("\nCadastro alunos")
         cadastro()
     elif escolha == '2':
-        print("\nnotas")
+        print("\nNotas")
         notas()
     elif escolha == '3':
-        print("\nCalculo")
+        print("\nCálculo da Notas")
         calculoNota()
     elif escolha == '4':
-        print('\n Impresão dicionário')
+        print('\n Impressão dicionário')
         imprimir()
 
