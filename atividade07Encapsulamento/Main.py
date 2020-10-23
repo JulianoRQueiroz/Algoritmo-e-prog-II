@@ -1,5 +1,6 @@
 from Pessoa import Pessoa
 from Fisica import Fisica
+from Juridica import Juridica
 
 
 menu = ''' \n\nMenu
@@ -7,9 +8,11 @@ menu = ''' \n\nMenu
     1 -	Cadastrar Cliente
     2 - Imprimir Dados do Cliente
     3 - Cadastro Pessoa Física
-    4 - Imprimir IMC Pessoa Física
-    5 - 
-    6 -
+    4 - Imprimir CPF Pessoa Jurídica
+    5 - Imprimir IMC Pessoa Física
+    6 - Cadastro de Pessoa Jurídica
+    7 - Imprimir CNPJ Pessoa Jurídica
+    8 - Imprimir Nota Fiscal 
 Escolha: '''
 
 
@@ -29,6 +32,7 @@ while True:
         print(' ---- Dados do Cliente --- \n')
         pessoa.imprimirNome()
         pessoa.imprimirTelefone()
+
     elif escolha == '3':
        print(' ---- Cadastro Pessoa Física --- \n')
        cpf = int(input('Digite o cpf do cliente: '))
@@ -40,12 +44,29 @@ while True:
        altura = float(input('Digite a altura do cliente: '))
        fisica = altura
        fisica = Fisica(codigo, nome, endereco, telefone, cpf, idade, peso, altura)
+
     elif escolha == '4':
-        print(' ---- Dados do Cliente --- \n')
+        print(' ---- CPF Pessoa Física--- \n')
         fisica.imprimiCpf()
-        fisica.calculaIMC(peso, altura)
+
     elif escolha == '5':
-      pass
+        print(' ---- IMC Pessoa Física--- \n')
+        fisica.calculaIMC(peso, altura)
+
     elif escolha == '6':
-        pass
+       print(' ---- Cadastro Pessoa Jurídica --- \n')
+       cnpj = int(input('Digite o cnpj do cliente: '))
+       juridica = cnpj
+       inscricaoEstadual = int(input('Informe o número da inscrição estadual: '))
+       juridica = inscricaoEstadual
+       qtdFuncionario = int(input('Informe a quantidade de Funcionários da empresa: '))
+       juridica = qtdFuncionario
+       juridica = Juridica(codigo, nome, endereco, telefone, cnpj, inscricaoEstadual, qtdFuncionario)
+    elif escolha == '7':
+        print(' ---- CNPJ Pessoa Jurídica--- \n')
+        juridica.imprimiCnpj()
+
+    elif escolha == '8':
+        print('-- Nota Fiscal Pessoa Jurídica --')
+        juridica.emitirNotaFiscal()
     
