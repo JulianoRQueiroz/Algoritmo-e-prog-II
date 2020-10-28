@@ -7,10 +7,6 @@ class Bicicleta(Veiculo):
         self.bagageiro = bagageiro
 
     def imprimirInformacoes(self):
-    #    print('Marca: ', self.marca)
-    #    print('qtdRodas: ', self.qtdRodas)
-    #    print('Modelo: ' , self.modelp)
-    #    print('Velocidade: ' , self.velocidade)
        print('Numero de marchas: ' , self.numMarchas)
        print('Bagageiro: ' , self.bagageiro)
         
