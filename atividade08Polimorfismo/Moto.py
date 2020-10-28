@@ -3,4 +3,4 @@ class Moto:
         self.partidaEletrica = partidaEletrica
 
     def imprimirInformacoes(self):
-        pass
+        print('Partida elétrica: ' , self.partidaEletrica)
